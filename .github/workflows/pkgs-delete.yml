@@ -1,0 +1,17 @@
+name: Package Cleanup
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Run every day at 24:00
+
+permissions:
+  contents: write
+
+jobs:
+  delete-pkgs:
+    name: Artifacts
+    uses: Elbandi/github-workflows/.github/workflows/delete-packages.yml@v1
+    with:
+      package-name: ${{ github.repository }}
+      min-versions-to-keep: 3
+      delete-only-pre-release-versions: true
