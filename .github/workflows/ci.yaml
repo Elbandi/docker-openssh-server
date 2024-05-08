@@ -4,12 +4,14 @@ on:
   push:
     branches: [ master ]
     paths-ignore:
-      - '.github/dependabot.yml'
-      - '.github/workflows/pkgs-delete.yml'
+      - '**.md'
+      - '.github/**'
+      - '!.github/workflows/ci.yml'
   pull_request:
     paths-ignore:
-      - '.github/dependabot.yml'
-      - '.github/workflows/pkgs-delete.yml'
+      - '**.md'
+      - '.github/**'
+      - '!.github/workflows/ci.yml'
 
 permissions:
   contents: read
