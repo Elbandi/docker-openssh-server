@@ -6,14 +6,14 @@ on:
     - cron: '0 0 * * *' # Run every day at 24:00
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   delete-pkgs:
     name: Artifacts
     uses: Elbandi/github-workflows/.github/workflows/delete-packages.yml@v1
     with:
-      package-name: ${{ github.repository }}
+      package-name: docker-openssh-server
       min-versions-to-keep: 3
       delete-only-untagged-versions: true
     permissions:
