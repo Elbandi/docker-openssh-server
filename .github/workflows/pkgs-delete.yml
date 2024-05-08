@@ -14,7 +14,7 @@ jobs:
     uses: Elbandi/github-workflows/.github/workflows/delete-packages.yml@v1
     with:
       package-name: docker-openssh-server
-      min-versions-to-keep: 3
+      min-versions-to-keep: 0
       delete-only-untagged-versions: true
     permissions:
       contents: read
