@@ -1,0 +1,21 @@
+{
+  repositories: ['Elbandi/docker-openssh-server'],
+  extends: [
+    'config:recommended',
+    'github>Elbandi/renovate-config:os-package(ubuntu_20_04)',
+    // Make sure we get a single PR combining all updates
+    'group:all',
+  ],
+
+  // Disable dependency dashboard
+  dependencyDashboard: false,
+
+  // Use our labelling system
+  labels: ['dependencies'],
+
+  // We generally always want the major version
+  separateMajorMinor: false,
+
+  // We manually update digest dependencies (eg. hashes in Github actions)
+  digest: {enabled: false},
+}

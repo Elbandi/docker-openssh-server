@@ -2,6 +2,9 @@
 
 FROM ghcr.io/linuxserver/baseimage-ubuntu:jammy@sha256:7473e6e8f5f4d4bd8a82dbd9defcf1eac266cf4b3c638e573014a950c15631ae
 
+# renovate: datasource=repology depName=ubuntu_22_04/openssh-server versioning=loose
+ARG OPENSSH_VERSION="1:8.9p1-3ubuntu0.6"
+
 # set version label
 ARG BUILD_DATE
 ARG VERSION
@@ -24,9 +27,9 @@ RUN \
     sudo && \
   echo "**** install openssh-server ****" && \
   apt-get install -y \
-    openssh-client \
-    openssh-server \
-    openssh-sftp-server && \
+    openssh-client=${OPENSSH_VERSION} \
+    openssh-server=${OPENSSH_VERSION} \
+    openssh-sftp-server=${OPENSSH_VERSION} && \
   echo "**** patch executable's name ****" && \
   ln -s /usr/sbin/sshd /usr/sbin/sshd.pam && \
   echo "**** setup openssh environment ****" && \
