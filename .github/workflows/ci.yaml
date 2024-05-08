@@ -3,7 +3,11 @@ name: CI
 on:
   push:
     branches: [ master ]
+    paths-ignore:
+      - '.github/dependabot.yml'
   pull_request:
+    paths-ignore:
+      - '.github/dependabot.yml'
 
 permissions:
   contents: read

@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM ghcr.io/linuxserver/baseimage-ubuntu:jammy
+FROM ghcr.io/linuxserver/baseimage-ubuntu:jammy@sha256:7473e6e8f5f4d4bd8a82dbd9defcf1eac266cf4b3c638e573014a950c15631ae
 
 # set version label
 ARG BUILD_DATE
