@@ -34,20 +34,6 @@ User GID:    $(id -g "${USER_NAME}")
 ───────────────────────────────────────
 "
 
-if [[ "$(uname -m)" == "armv7l" ]] || [[ "$(uname -m)" == "armhf" ]]; then
-    echo '
-╔═════════════════════════════════════════════════════╗
-║                                                     ║
-║      The 32-bit Arm version of this image will      ║
-║       no longer be supported after 2023-07-01       ║
-║                                                     ║
-║          See: https://linuxserver.io/armhf          ║
-║                  for more details                   ║
-║                                                     ║
-╚═════════════════════════════════════════════════════╝
-'
-fi
-
 lsiown "${USER_NAME}":"${USER_NAME}" /app
 lsiown "${USER_NAME}":"${USER_NAME}" /config
 lsiown "${USER_NAME}":"${USER_NAME}" /defaults
