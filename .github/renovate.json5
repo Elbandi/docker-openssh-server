@@ -2,7 +2,7 @@
   repositories: ['Elbandi/docker-openssh-server'],
   extends: [
     'config:recommended',
-    'github>Elbandi/renovate-config:os-package(ubuntu_20_04)',
+    'github>Elbandi/renovate-config:os-package(ubuntu_22_04)',
     // Make sure we get a single PR combining all updates
     'group:all',
   ],
