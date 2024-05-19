@@ -23,8 +23,8 @@ jobs:
     with:
       publish: ${{ github.event_name == 'push' }}
     secrets:
-      DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
-      DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+      DOCKER_USERNAME: ${{ github.actor }}
+      DOCKER_PASSWORD: ${{ github.token }}
     permissions:
       contents: read
       packages: write
