@@ -3,7 +3,7 @@
 FROM ghcr.io/linuxserver/baseimage-ubuntu:jammy@sha256:7473e6e8f5f4d4bd8a82dbd9defcf1eac266cf4b3c638e573014a950c15631ae
 
 # renovate: datasource=repology depName=ubuntu_22_04/openssh versioning=loose
-ARG OPENSSH_VERSION="1:8.9p1-3ubuntu0.6"
+ARG OPENSSH_VERSION="1:8.9p1-3ubuntu0.7"
 
 # set version label
 ARG BUILD_DATE
