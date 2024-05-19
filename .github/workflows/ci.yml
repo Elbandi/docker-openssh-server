@@ -21,6 +21,7 @@ jobs:
     name: Artifacts
     uses: Elbandi/github-workflows/.github/workflows/artifacts.yaml@v1
     with:
+      repository: ${{ github.repository }}
       publish: ${{ github.event_name == 'push' }}
     secrets:
       DOCKER_USERNAME: ${{ github.actor }}
