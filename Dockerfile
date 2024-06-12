@@ -30,6 +30,7 @@ RUN \
     openssh-client=${OPENSSH_VERSION} \
     openssh-server=${OPENSSH_VERSION} \
     openssh-sftp-server=${OPENSSH_VERSION} && \
+  printf "Linuxserver.io version: ${VERSION}\nBuild-date: ${BUILD_DATE}" > /build_version && \
   echo "**** patch executable's name ****" && \
   ln -s /usr/sbin/sshd /usr/sbin/sshd.pam && \
   echo "**** setup openssh environment ****" && \
