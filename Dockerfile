@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM ghcr.io/linuxserver/baseimage-ubuntu:jammy@sha256:d1ca61758c5f3201fe6fb823007fe014410c724c00d0130c960459f9a96ecfcf
+FROM ghcr.io/linuxserver/baseimage-ubuntu:jammy@sha256:385d2f6eccd9de7f665c04d1f6e42d1cd4ddf798264dd56d7fdd7dd869e0bb5b
 
 # renovate: datasource=repology depName=ubuntu_22_04/openssh versioning=loose
 ARG OPENSSH_VERSION="1:8.9p1-3ubuntu0.10"
